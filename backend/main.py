@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import List
 import time
 
-from retriever import retriever, reranker
+from .retriever import retriever, reranker
 from llm_handler import llm_handler
 from citation_manager import citation_manager
 from chunking import chunker

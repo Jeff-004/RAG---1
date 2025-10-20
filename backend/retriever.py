@@ -10,7 +10,7 @@ class Retriever:
     
     def retrieve(self, query: str, top_k: int = settings.TOP_K) -> List[Dict]:
         """Retrieve top-k documents"""
-        query_vector = embedding_model.embed_text(query).tolist()
+        query_vector = embedding_model.embed_text(query)
         results = self.vector_store.query(query_vector, top_k=top_k)
         return results
 

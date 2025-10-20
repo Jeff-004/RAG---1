@@ -21,7 +21,7 @@ class PineconeStore(VectorStore):
         vectors_to_upsert = []
         for doc in documents:
             from embeddings import embedding_model
-            vector = embedding_model.embed_text(doc["content"]).tolist()
+            vector = embedding_model.embed_text(doc["content"])
             metadata = {k: v for k, v in doc["metadata"].items() if v is not None}
             vectors_to_upsert.append((
                 doc["id"],

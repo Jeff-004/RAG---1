@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Query System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RAG Retrieval System</h1>
+            <p>Ask questions about uploaded documents</p>
+        </header>
+        
+        <main>
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <h2>Upload Document</h2>
+                <textarea id="docContent" placeholder="Paste document content..."></textarea>
+                <input type="text" id="docSource" placeholder="Source (e.g., doc1.pdf)">
+                <input type="text" id="docTitle" placeholder="Document title">
+                <button onclick="uploadDocument()">Upload</button>
+                <p id="uploadStatus"></p>
+            </section>
+            
+            <!-- Query Section -->
+            <section class="query-section">
+                <h2>Ask a Question</h2>
+                <input type="text" id="queryInput" placeholder="Enter your question...">
+                <button onclick="submitQuery()">Search</button>
+            </section>
+            
+            <!-- Results Section -->
+            <section id="results" class="results-section" style="display:none;">
+                <div id="timing" class="timing"></div>
+                
+                <div class="answer-box">
+                    <h3>Answer</h3>
+                    <p id="answer"></p>
+                </div>
+                
+                <div class="citations-box">
+                    <h3>Citations</h3>
+                    <div id="citations"></div>
+                </div>
+                
+                <div class="sources-box">
+                    <h3>Retrieved Sources</h3>
+                    <div id="sources"></div>
+                </div>
+            </section>
+            
+            <div id="loading" class="loading" style="display:none;">
+                <p>Processing...</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

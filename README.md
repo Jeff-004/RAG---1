@@ -3,8 +3,8 @@ RAG System - Retrieval Augmented Generation
 A complete end-to-end retrieval-augmented generation system with vector database storage, semantic search, reranking, and LLM-powered answers with citations.
 Live URL
 
-    Frontend: http://localhost:8080
-    Backend API: http://localhost:8000
+    Frontend: https://rag-1-lemon.vercel.app/
+    Backend API: https://rag-1-05un.onrender.com/
 
 Architecture
 
@@ -33,7 +33,7 @@ Index Name: rag-index Dimension: 384 (from all-MiniLM-L6-v2 embeddings) Metric: 
 Setup & Installation
 Prerequisites
 
-    Python 3.11+
+    Python 3.11.13
     Conda (recommended)
     API Keys: Pinecone, Groq, Cohere
 
@@ -157,6 +157,7 @@ rag-system/
 │   ├── llm_handler.py          # Groq LLM integration
 │   ├── citation_manager.py     # Citation formatting
 │   ├── .env                    #Environment Variables
+|   ├──.python-version          #Python version
 |   └──requirements.txt         # Python dependencies
 |   
 ├── frontend/
@@ -264,6 +265,5 @@ Minimal Eval (Gold Set): Test with 5 Q&A pairs:
     Q: "What is an unknown fact?" A: [System answer - should say "not found"] Success Rate: ✓/✗
 
 Success Rate: 5/5 = 100% (Gold set baseline)
-Resume Link
 
 Built with: FastAPI, Pinecone, Groq, Cohere, Sentence Transformers Status: Production Ready Last Updated: October 2025

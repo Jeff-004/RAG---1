@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://rag-1-05un.onrender.com/";
 
 async function uploadDocument() {
     const content = document.getElementById("docContent").value;
